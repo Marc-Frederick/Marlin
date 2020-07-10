@@ -600,16 +600,12 @@ def get_env(board_name, ver_Marlin):
           target_env = 'DUE_USB'
         else:
           target_env = 'DUE'
-    elif env_A == 'STM32F103RC_btt' or env_A == 'STM32F103RE_btt':
-      if env_A == 'STM32F103RE_btt':
-        get_answer(board_name, 'MCU Type?', 'STM32F103RC', 'STM32F103RE')
-        if 1 == get_answer_val:
-          env_A = 'STM32F103RC_btt'
-      target_env = env_A
-      if env_A == 'STM32F103RC_btt':
-        get_answer(board_name, 'RCT6 Flash Size?', '512K', '256K')
-        if 1 == get_answer_val:
-          target_env += '_512K'
+    elif env_A == 'STM32F103RC_btt':
+      get_answer(board_name, 'RCT6 Flash Size?', '512K', '256K')
+      if 1 == get_answer_val:
+        target_env = 'STM32F103RC_btt_512K'
+      else:
+        target_env = 'STM32F103RC_btt'
       get_answer(board_name, 'USB Support?', 'USB', 'No USB')
       if 1 == get_answer_val:
         target_env += '_USB'
