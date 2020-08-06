@@ -71,7 +71,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(Marc-Fr�d�rick, Bidouilleur)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(Marc-Frederick, Bidouilleur)" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -758,7 +758,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 500, 93 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 99, 99, 398, 110 }
 
 /**
  * Default Max Feed Rate (mm/s)
